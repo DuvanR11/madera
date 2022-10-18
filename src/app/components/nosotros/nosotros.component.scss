@@ -1,0 +1,29 @@
+section{
+  
+  .row{
+    .texto{
+      .text-principal{
+        color: #333;
+        font-family: "Roboto", Sans-serif;
+        font-size: 45px;
+        font-weight: 800;
+        text-transform: uppercase;
+        line-height: 55px;
+      }
+      .text-segundario{
+        font-family: "Poppins", Sans-serif;
+        font-size: 20px;
+        font-weight: 400;
+        text-transform: none;
+        line-height: 25px;
+      }
+    }
+    .imagen{
+      img{
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}

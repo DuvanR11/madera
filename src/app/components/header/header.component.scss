@@ -1,0 +1,23 @@
+*{
+  span{
+    cursor: pointer;
+  }
+  p{
+    cursor: pointer;
+  }
+}
+
+mat-toolbar{
+  background-color: #268041;
+  color: #fff;
+  position: fixed;
+  z-index: 100;
+  .example-spacer {
+    flex: 1 auto;
+  }
+  .rutas{
+    display: flex;
+    font-size: 1rem;
+    gap: 1rem;
+  }
+}
