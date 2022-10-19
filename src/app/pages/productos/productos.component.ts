@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CategoriaService } from 'src/app/services/categoria.service';
 
 @Component({
   selector: 'app-productos',
@@ -7,9 +8,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductosComponent implements OnInit {
 
-  constructor() { }
+  lista: any;
+  constructor(private categoriaSvc: CategoriaService) { }
 
-  ngOnInit(): void {
+  // obtnerCategorias(): any{
+  //   this.categoriaSvc.litarCategorias().subscribe(data=>{
+  //     console.log(data);
+  //     this.lista = data;
+  //   }, error=>{
+  //     console.log(error);
+  //   })
+  // }
+
+  obtnerCategorias():any {
+    this.categoriaSvc.litarCategorias().subscribe((respuesta)=>{
+      console.log(respuesta);
+      this.lista= respuesta
+    })
   }
 
+  ngOnInit(): void {
+    this.obtnerCategorias();
+  }
 }

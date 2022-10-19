@@ -1,15 +1,6 @@
 <section class="m-0 row align-items-center" style="padding-top: 5rem;">
   <div class="categorias col-lg-3">
-    <div class="row justify-content-center">
-      <button class="" style="
-      width: 70%;
-      font-size: 22px;
-      font-weight: 500;
-      background-color: #C3A694;
-      color: #fff;
-      border: none;
-      border-radius: 25px;
-      padding: 15px 60px 15px 60px;">Perfileria</button>
+    <div class="row justify-content-center" *ngFor="let categoria of lista">
 
       <button class="mt-1" style="
       width: 70%;
@@ -19,37 +10,8 @@
       color: #fff;
       border: none;
       border-radius: 25px;
-      padding: 15px 60px 15px 60px;">Parques</button>
+      padding: 15px 60px 15px 60px;">{{categoria.catNombre}}</button>
 
-      <button class="mt-1" style="
-      width: 70%;
-      font-size: 22px;
-      font-weight: 500;
-      background-color: #C3A694;
-      color: #fff;
-      border: none;
-      border-radius: 25px;
-      padding: 15px 60px 15px 60px;">Casas</button>
-
-      <button class="mt-1" style="
-      width: 70%;
-      font-size: 22px;
-      font-weight: 500;
-      background-color: #C3A694;
-      color: #fff;
-      border: none;
-      border-radius: 25px;
-      padding: 15px 60px 15px 60px;">Estibas</button>
-
-      <button class="mt-1" style="
-      width: 70%;
-      font-size: 22px;
-      font-weight: 500;
-      background-color: #C3A694;
-      color: #fff;
-      border: none;
-      border-radius: 25px;
-      padding: 15px 60px 15px 60px;">Mobiliario</button>
     </div>
   </div>
   <div class="content-info col-lg-9" style="background: #f6f6f6; border-radius: 20px">
@@ -70,5 +32,5 @@
 </section>
 
 <div class="content-card-productos">
-<app-card-productos></app-card-productos>
+<!-- <app-card-productos (click)="categoria()"></app-card-productos> -->
 </div>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-form-solicitud',
   templateUrl: './form-solicitud.component.html',
@@ -17,7 +18,7 @@ export class FormSolicitudComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  
+
   onPickupOrDelivery(value: boolean): void {
     this.Tienda = value;
   }
