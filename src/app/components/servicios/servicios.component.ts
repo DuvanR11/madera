@@ -1,4 +1,6 @@
+import { RouterModule } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
+import * as AOS from 'aos'
 
 @Component({
   selector: 'app-servicios',
@@ -35,6 +37,8 @@ export class ServiciosComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    AOS.init()
+    window.addEventListener('load', AOS.refresh)
   }
 
 }

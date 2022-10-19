@@ -1,0 +1,12 @@
+<section class="asociados">
+  <P class="text-center subtitulo2">Nuestros Asociados</P>
+  <owl-carousel-o [options]="customOptions">
+
+    <ng-container *ngFor="let slide of dynamicSlides">
+      <ng-template carouselSlide>
+        <img [src]="slide.src" [title]="slide.title" width="190" height="160">
+      </ng-template>
+    </ng-container>
+
+  </owl-carousel-o>
+</section>

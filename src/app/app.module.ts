@@ -19,10 +19,21 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
-import {MatCardModule} from '@angular/material/card';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
+import { CategoriasComponent } from './sliders/categorias/categorias.component';
+import { AsociadosComponent } from './sliders/asociados/asociados.component';
+import { ProductosComponent } from './pages/productos/productos.component';
+import {MatBadgeModule} from '@angular/material/badge';
+import { GaleriaComponent } from './components/galeria/galeria.component';
+import {MatCardModule} from '@angular/material/card';
+import { CardProductosComponent } from './components/card-productos/card-productos.component';
+import { SolicitudComponent } from './pages/solicitud/solicitud.component';
+import { FormSolicitudComponent } from './forms/form-solicitud/form-solicitud.component';
+import { LoginComponent } from './forms/login/login.component';
+import {MatSelectModule} from '@angular/material/select';
+import {MatRadioModule} from '@angular/material/radio';
 
 @NgModule({
   declarations: [
@@ -36,7 +47,15 @@ import {MatInputModule} from '@angular/material/input';
     NosotrosComponent,
     TestimoniosComponent,
     AgendayaComponent,
-    EquipoComponent
+    EquipoComponent,
+    CategoriasComponent,
+    AsociadosComponent,
+    ProductosComponent,
+    GaleriaComponent,
+    CardProductosComponent,
+    SolicitudComponent,
+    FormSolicitudComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -45,10 +64,14 @@ import {MatInputModule} from '@angular/material/input';
     MatToolbarModule,
     MatButtonModule,
     MatIconModule,
-    MatCardModule,
     CarouselModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatBadgeModule,
+    MatCardModule,
+    MatSelectModule,
+    MatRadioModule
+
 
   ],
   providers: [],

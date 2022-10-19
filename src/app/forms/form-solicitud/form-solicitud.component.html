@@ -1,0 +1,113 @@
+<section>
+  <div>
+    <div class="row venta justify-content-center p-0 m-0">
+      <div class="col-lg-7">
+          <h2 class="text-center">Productos seleccionado</h2>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Producto</th>
+                <th>Cantidad</th>
+                <th>Precio U</th>
+                <th>sub Total</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr >
+                <td>hola</td>
+                <td>20</td>
+                <td>10</td>
+                <td>10000</td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="row">
+               <div class="col-12">
+        <mat-card>
+          <h2 class="text-center">Detalle Solicitud</h2>
+          <mat-card-content>
+            <p class="detalle-precio">Cantidad de productos: 12</p>
+            <p class="detalle-precio">
+              Total Compra: 12
+            </p>
+          </mat-card-content>
+        </mat-card>
+      </div>
+
+
+<div class="col-12">
+  <form class="form item" #checkoutForm="">
+    <mat-form-field class="form__element">
+      <input
+        matInput
+        placeholder="Nombre"
+        required
+        name="name"
+      >
+      <!-- <mat-error *ngIf="!name.valid || name.pristine">
+        Name is required
+      </mat-error> -->
+    </mat-form-field>
+    <mat-form-field class="form__element">
+      <input
+        matInput
+        placeholder="Producto"
+        required
+      >
+      <!-- <mat-error *ngIf="!name.valid || name.pristine">
+        Name is required
+      </mat-error> -->
+    </mat-form-field>
+    <mat-radio-group class="form__element">
+      <p>Medio de Respuesta</p>
+        <mat-radio-button
+         value="pickup"
+         (change)="onPickupOrDelivery(false)"
+         >Correo
+        </mat-radio-button>
+        &nbsp;
+        <mat-radio-button
+        value="delivery"
+        (change)="onPickupOrDelivery(true)"
+        >WhatsApp
+       </mat-radio-button>
+    </mat-radio-group>
+
+    <ng-container *ngIf="Tienda; else Envio">
+      <mat-form-field class="form__element">
+        <input
+        matInput
+        placeholder="Numero de Celular"
+        required
+        >
+      </mat-form-field>
+   </ng-container>
+
+  <ng-template #Envio>
+    <mat-form-field class="form__element">
+      <input
+      matInput
+      placeholder="Correo elctronico"
+      required
+      >
+    </mat-form-field>
+  </ng-template>
+
+  </form>
+  <div class="container___button">
+    <button class="btn-checkout"  mat-raised-button color="primary" type="submit">
+    Solicitar
+    </button>
+  </div>
+</div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
