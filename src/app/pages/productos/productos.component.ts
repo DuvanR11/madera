@@ -11,20 +11,15 @@ export class ProductosComponent implements OnInit {
   lista: any;
   constructor(private categoriaSvc: CategoriaService) { }
 
-  // obtnerCategorias(): any{
-  //   this.categoriaSvc.litarCategorias().subscribe(data=>{
-  //     console.log(data);
-  //     this.lista = data;
-  //   }, error=>{
-  //     console.log(error);
-  //   })
-  // }
-
   obtnerCategorias():any {
     this.categoriaSvc.litarCategorias().subscribe((respuesta)=>{
-      console.log(respuesta);
+      // console.log(respuesta);
       this.lista= respuesta
     })
+  }
+
+  verProductos(): any{
+    console.log("Hola")
   }
 
   ngOnInit(): void {
