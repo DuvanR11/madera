@@ -10,27 +10,58 @@
       color: #fff;
       border: none;
       border-radius: 25px;
-      padding: 15px 60px 15px 60px;"  (click)="verProductos()">{{categoria.catNombre}}</button>
+      padding: 15px 60px 15px 60px;" (click)="obtnerProductos(categoria.id)" (click)="obtnerCategoria(categoria.id)">{{categoria.catNombre}}</button>
 
     </div>
   </div>
   <div class="content-info col-lg-9" style="background: #f6f6f6; border-radius: 20px">
-   <div class="row justify-content-center align-items-center">
-    <div class="info-texto col-6">
-      <p style="color: #417A83;
-      font-size: 40px;
-      font-weight: 700;
-      text-transform: none;">Perfilería</p>
 
-      <p style="font-size:larger">Nuestros productos fabricados a base de plástico reciclado como sustituto de la madera, son empleados para la vivienda perfecta. Encuentra aquí la que más se ajusta a tus necesidades de vivienda o inversión.</p>
+    <div *ngIf="descripcion == null; else elseBlock">
+      <div class="row justify-content-center align-items-center">
+        <div class="info-texto col-6">
+          <p style="color: #417A83;
+          font-size: 40px;
+          font-weight: 700;
+          text-transform: none;">Nuestro Catalogo</p>
+
+          <p style="font-size:larger">Nuestros productos fabricados a base de plástico reciclado como sustituto de la madera, son empleados para la vivienda perfecta. Encuentra aquí la que más se ajusta a tus necesidades de vivienda o inversión.</p>
+        </div>
+        <div class="info-imagen col-4">
+          <img src="https://ocoplast.com/wp-content/uploads/2022/10/Tabla-10.5-X-2.5-X-180-cm-PREMIUM_1.jpg" alt="" style="object-fit: cover; width: 100%; height: 100%; border-radius: 20px">
+        </div>
+       </div>
     </div>
-    <div class="info-imagen col-4">
-      <img src="https://ocoplast.com/wp-content/uploads/2022/10/Tabla-10.5-X-2.5-X-180-cm-PREMIUM_1.jpg" alt="" style="object-fit: cover; width: 100%; height: 100%; border-radius: 20px">
-    </div>
-   </div>
+    
+    <ng-template #elseBlock>
+      <div class="row justify-content-center align-items-center">
+        <div class="info-texto col-6">
+          <p style="color: #417A83;
+          font-size: 40px;
+          font-weight: 700;
+          text-transform: none;">{{descripcion.catNombre}}</p>
+
+          <p style="font-size:larger">Nuestros productos fabricados a base de plástico reciclado como sustituto de la madera, son empleados para la vivienda perfecta. Encuentra aquí la que más se ajusta a tus necesidades de vivienda o inversión.</p>
+        </div>
+        <div class="info-imagen col-4">
+          <img src="https://ocoplast.com/wp-content/uploads/2022/10/Tabla-10.5-X-2.5-X-180-cm-PREMIUM_1.jpg" alt="" style="object-fit: cover; width: 100%; height: 100%; border-radius: 20px">
+        </div>
+       </div>
+    </ng-template>
   </div>
 </section>
-
+<p class="titulo">Productos Disponibles</p>
 <div class="content-card-productos">
-<app-card-productos></app-card-productos>
+  <section class="content-card-productos" >
+    <mat-card class="example-card" *ngFor="let producto of productos">
+      <img mat-card-image src="https://ocoplast.com/wp-content/uploads/2022/05/Tabla-10.5-X-2.5-X-300-cm-PREMIUM_2-300x300.jpg" alt="Photo of a Shiba Inu">
+      <mat-card-content>
+        <p>{{producto.proNombre}}</p>
+        <p>Tabla 10.5 x 2.5 x 300 cm</p>
+        <p>{{producto.idCategoria}}</p>
+      </mat-card-content>
+      <mat-card-actions class="row">
+        <button mat-flat-button style="background: #037c27a8" [routerLink]="['/solicitud']">Solicitar</button>
+      </mat-card-actions>
+    </mat-card>
+  </section>
 </div>

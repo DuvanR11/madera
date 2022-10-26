@@ -2,8 +2,9 @@
   <span [routerLink]="['inicio']">Parques y Decoraciones</span>
   <span class="example-spacer"></span>
   <div class="rutas">
-    <p [routerLink]="['inicio']">Inicio</p>
+    <p [routerLink]="['inicio']" (click)="locationreload()">Inicio</p>
     <p [routerLink]="['productos']">Productos</p>
+    <p [routerLink]="['foro']">Foro</p>
     <p [routerLink]="['contactanos']">Contactanos</p>
     <mat-icon matBadge="15" matBadgeColor="warn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">home</mat-icon>
   </div>

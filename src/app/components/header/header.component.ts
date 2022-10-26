@@ -9,6 +9,12 @@ export class HeaderComponent implements OnInit {
 
   constructor() { }
 
+  locationreload() {
+    setTimeout(() => {
+      window.location.reload();
+    }, 1);
+  }
+
   ngOnInit(): void {
   }
 

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -29,12 +30,14 @@ import { ProductosComponent } from './pages/productos/productos.component';
 import {MatBadgeModule} from '@angular/material/badge';
 import { GaleriaComponent } from './components/galeria/galeria.component';
 import {MatCardModule} from '@angular/material/card';
-import { CardProductosComponent } from './components/card-productos/card-productos.component';
 import { SolicitudComponent } from './pages/solicitud/solicitud.component';
 import { FormSolicitudComponent } from './forms/form-solicitud/form-solicitud.component';
 import { LoginComponent } from './forms/login/login.component';
 import {MatSelectModule} from '@angular/material/select';
 import {MatRadioModule} from '@angular/material/radio';
+import { ForoComponent } from './pages/foro/foro.component';
+import { ContactanosComponent } from './pages/contactanos/contactanos.component';
+import { ContactComponent } from './forms/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -53,10 +56,12 @@ import {MatRadioModule} from '@angular/material/radio';
     AsociadosComponent,
     ProductosComponent,
     GaleriaComponent,
-    CardProductosComponent,
     SolicitudComponent,
     FormSolicitudComponent,
-    LoginComponent
+    LoginComponent,
+    ForoComponent,
+    ContactanosComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
@@ -72,9 +77,9 @@ import {MatRadioModule} from '@angular/material/radio';
     MatCardModule,
     MatSelectModule,
     MatRadioModule,
-    HttpClientModule
-
-
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -10,6 +10,8 @@ import { IProducto } from '../interfaces/producto.interface';
 export class ProductoService {
 
   url = 'http://localhost:8000/producto'
+  filtro = 'http://localhost:8000/filtro'
+
   constructor(private http: HttpClient) { }
 
   litarProductos(): Observable<any>{
@@ -20,6 +22,11 @@ export class ProductoService {
   getProducto(id: string): Observable<any>{
     console.log(this.http.get(this.url + "/"+id))
     return this.http.get(this.url + "/"+id)
+  }
+
+  filtradoProductos(id: number): Observable<any>{
+    console.log(this.http.get(this.filtro + "/"+id))
+    return this.http.get(this.filtro + "/"+id)
   }
 
   eliminarProducto(id: string): Observable<any>{
